@@ -6,7 +6,8 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule) }
 ];
 
 @NgModule({

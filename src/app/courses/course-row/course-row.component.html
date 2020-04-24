@@ -1,0 +1,6 @@
+<th scope="row">{{course.id}}</th>
+<td>{{course.title}}</td>
+<td>{{courseDuration}}</td>
+<td>{{course.description}}</td>
+<td><button type="button" class="btn btn-primary" routerLink="/courses/id/{{course.id}}">Edit</button></td>
+<td><button type="button" class="btn btn-danger" (click)="handleDelete()">Delete</button></td>

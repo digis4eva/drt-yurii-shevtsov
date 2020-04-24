@@ -11,7 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoursesModule } from "./courses/courses.module";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { CoursesModule } from "./courses/courses.module";
     AppRoutingModule,
     BrowserAnimationsModule,
     AlertModule,
-    CoursesModule
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

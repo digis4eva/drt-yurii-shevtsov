@@ -1,0 +1,32 @@
+<div class="backdrop" routerLink="/courses"></div>
+<div class="edit-container" [formGroup]="courseForm" (submit)="handleSubmit()">
+  <div class="row">
+    <div class="form-group col-sm-3">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title">
+    </div>
+    <div class="form-group col-sm-3">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+    </div>
+    <div class="form-row col-sm-4">
+      <div class="form-group col-sm-6">
+        <label for="duration">Duration</label>
+        <input type="number" class="form-control" id="duration" formControlName="duration">
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="durationUnit">Duration Unit</label>
+        <select class="form-control" id="durationUnit" formControlName="durationUnit">
+          <option selected>day</option>
+          <option>week</option>
+          <option>month</option>
+          <option>year</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-success" [disabled]="courseForm.invalid || isSubmitting" (click)="handleSubmit()">Submit</button>
+    <button type="button" class="btn btn-danger" routerLink="/courses">Cancel</button>
+  </div>
+</div>
